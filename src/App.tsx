@@ -1,44 +1,27 @@
 import { useState } from "react"
 import "./App.css"
 import { Esp } from "./components/Esp"
+import { Palette } from "./components/Palette"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [fillColors, setFillColors] = useState(Array(5).fill("white"))
+  const [currentColor, setCurrentColor] = useState("blue")
+
+  const onFillColor = (i: number) => {
+    let newFillColors = fillColors.slice(0)
+    newFillColors[i] = currentColor
+    setFillColors(newFillColors)
+  }
 
   return (
     <div className="App">
-      <div>
-        {/* <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a> */}
-        <a href="https://svgshare.com/i/q5k.svg" target="_blank">
-          <img
-            src="https://svgshare.com/i/q5k.svg"
-            className="logo"
-            alt="Vite logo"
-          />
-        </a>
-        {/* <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> */}
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
       <div className="svgContainer">
-        <Esp></Esp>
+        <Esp fillColors={fillColors} onFill={onFillColor}></Esp>
       </div>
-      <div className="paletteContainer">
-        <div className="palette"></div>
-        <div className="palette"></div>
-        <div className="palette"></div>
-        <div className="palette"></div>
-        <div className="palette"></div>
-        <div className="palette"></div>
-      </div>
+      <Palette
+        currentColor={currentColor}
+        changeColor={setCurrentColor}
+      ></Palette>
     </div>
   )
 }
