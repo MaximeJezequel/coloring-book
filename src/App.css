@@ -1,24 +1,40 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
-  border: 2px solid black;
+.App {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.backgroundContainer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .svgContainer {
   border-bottom: 5px solid black;
-  background-color: lightgray;
+  background-color: rgb(241, 232, 232);
+  height: calc(85% - 5px);
+  width: 100%;
+}
+
+.svgContainer svg {
+  height: 100%;
+  width: 100%;
 }
 
 .color-swatch-container {
   display: flex;
+  align-items: center;
+  height: 15%;
   width: 100%;
   justify-content: center;
+  background-color: rgb(24, 24, 24);
 }
 .color-swatch {
-  margin: 25px;
-  height: 100px;
-  width: 100px;
+  height: min(calc(100vw / 8), 80px);
+  width: min(calc(100vw / 8), 80px);
+  margin: 2vw;
   border: 5px solid black;
   border-radius: 15px;
 }
