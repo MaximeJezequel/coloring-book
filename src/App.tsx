@@ -5,7 +5,7 @@ import { Palette } from "./components/Palette"
 
 function App() {
   const [fillColors, setFillColors] = useState(Array(5).fill("white"))
-  const [currentColor, setCurrentColor] = useState("blue")
+  const [currentColor, setCurrentColor] = useState("white")
   const colors = ["#C31BE0", "#007DFE", "#2FCE29", "#FCF506", "#F60C0D"]
 
   const onFillColor = (i: number) => {

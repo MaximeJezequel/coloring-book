@@ -2,20 +2,18 @@
   background-color: black;
   width: 100vw;
   height: 100vh;
-  position: absolute;
 }
 
 .backgroundContainer {
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 .svgContainer {
-  border-bottom: 5px solid black;
-  background-color: rgb(241, 232, 232);
-  height: calc(85% - 5px);
+  height: 85%;
   width: 100%;
+  background-image: url("./assets/edge.jpg");
+  background-size: 100% 102%;
 }
 
 .svgContainer svg {
@@ -32,9 +30,23 @@
   background-color: rgb(24, 24, 24);
 }
 .color-swatch {
-  height: min(calc(100vw / 8), 80px);
-  width: min(calc(100vw / 8), 80px);
+  height: min(calc(100vw / 8), 60px);
+  width: min(calc(100vw / 8), 60px);
   margin: 2vw;
   border: 5px solid black;
   border-radius: 15px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .color-swatch {
+    height: min(calc(100vw / 12), 80px);
+    width: min(calc(100vw / 12), 80px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .color-swatch {
+    height: min(calc(100vw / 16), 120px);
+    width: min(calc(100vw / 16), 120px);
+  }
 }
