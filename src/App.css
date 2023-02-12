@@ -52,3 +52,22 @@
     width: min(calc(100vw / 16), 120px);
   }
 }
+
+@media (orientation: landscape) {
+  .svgContainer {
+    height: 100%;
+  }
+
+  .color-swatch-container {
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    right: 0;
+  }
+  .color-swatch {
+    height: min(calc(100vh / 8), 60px);
+    width: min(calc(100vh / 8), 60px);
+    margin: 2vh;
+  }
+}
