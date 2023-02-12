@@ -13,7 +13,7 @@
   height: 85%;
   width: 100%;
   background-image: url("./assets/edge.jpg");
-  background-size: 100% 102%;
+  background-size: 100% 100%;
 }
 
 .svgContainer svg {
@@ -24,10 +24,12 @@
 .color-swatch-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 15%;
   width: 100%;
-  justify-content: center;
-  background-color: rgb(24, 24, 24);
+
+  position: fixed;
+  bottom: 0;
 }
 .color-swatch {
   height: min(calc(100vw / 8), 60px);
