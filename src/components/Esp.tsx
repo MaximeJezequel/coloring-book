@@ -12,9 +12,9 @@ export const Esp = ({
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="1536.000000pt"
+      width="1152.000000pt"
       height="2048.000000pt"
-      viewBox="0 0 1536.000000 2048.000000"
+      viewBox="0 0 1152.000000 2048.000000"
       preserveAspectRatio="xMidYMid meet"
     >
       <g
