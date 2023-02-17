@@ -1,5 +1,5 @@
-import { linePathList } from "../assets/linePathList"
-import { pathList } from "../assets/pathList"
+import { linePathList } from "../data/linePathList"
+import { pathList } from "../data/pathList"
 
 export const Esp = ({
   fillColors,

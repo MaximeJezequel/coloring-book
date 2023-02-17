@@ -1,5 +1,13 @@
+$background: black;
+$edge-url: "../assets/edge.jpg";
+$edge-rotated-url: "../assets/edge-rotated.png";
+
+body {
+  margin: 0;
+}
+
 .App {
-  background-color: black;
+  background-color: $background;
   width: 100vw;
   height: 100vh;
 }
@@ -12,7 +20,7 @@
 .svgContainer {
   height: 85%;
   width: 100%;
-  background-image: url("./assets/edge.jpg");
+  background-image: url($edge-url);
   background-size: 100% 100%;
 }
 
@@ -56,6 +64,8 @@
 @media (orientation: landscape) {
   .svgContainer {
     height: 100%;
+    width: 85%;
+    background-image: url($edge-rotated-url);
   }
 
   .color-swatch-container {
