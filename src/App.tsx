@@ -1,4 +1,5 @@
 import { useState } from "react"
+import eraser from "./assets/eraser.png"
 import { Esp } from "./components/Esp"
 import { Palette } from "./components/Palette"
 import "./styles/main.scss"
@@ -18,6 +19,14 @@ function App() {
     <div className="App">
       <div className="svgContainer">
         <Esp fillColors={fillColors} onFill={onFillColor} />
+        <div
+          className="eraser"
+          onClick={() => {
+            setCurrentColor("white")
+          }}
+        >
+          <img className="color-swatch small" src={eraser} />
+        </div>
       </div>
       <div className="color-swatch-container">
         {colors.map((color) => {

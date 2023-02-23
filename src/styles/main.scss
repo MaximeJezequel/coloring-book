@@ -18,15 +18,26 @@ body {
 }
 
 .svgContainer {
-  height: 85%;
-  width: 100%;
+  height: 85vh;
+  width: 100vw;
   background-image: url($edge-url);
   background-size: 100% 100%;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.svgContainer svg {
-  height: 100%;
-  width: 100%;
+.eraser {
+  position: absolute;
+  top: min(5vh, 20px);
+  right: min(5vh, 20px);
+
+  img {
+    background-color: none;
+    border: none;
+  }
 }
 
 .color-swatch-container {
@@ -35,10 +46,10 @@ body {
   justify-content: center;
   height: 15%;
   width: 100%;
-
   position: fixed;
   bottom: 0;
 }
+
 .color-swatch {
   height: min(calc(100vw / 8), 60px);
   width: min(calc(100vw / 8), 60px);
@@ -63,9 +74,18 @@ body {
 
 @media (orientation: landscape) {
   .svgContainer {
-    height: 100%;
-    width: 85%;
-    background-image: url($edge-rotated-url);
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 85vw;
+    position: fixed;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+  }
+
+  .eraser {
+    transform: rotate(90deg);
   }
 
   .color-swatch-container {
