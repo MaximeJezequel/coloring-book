@@ -8,18 +8,21 @@ body {
 
 .App {
   background-color: $background;
-  width: 100vw;
+  // width: 100vw;
   height: 100vh;
+  height: 100dvh;
 }
 
-.backgroundContainer {
-  height: 100%;
-  width: 100%;
-}
+// .backgroundContainer {
+//   height: 100%;
+//   width: 100%;
+// }
 
 .svgContainer {
   height: 85vh;
   width: 100vw;
+  height: 85dvh;
+  width: 100dvw;
   background-image: url($edge-url);
   background-size: 100% 100%;
 
@@ -53,6 +56,8 @@ body {
 .color-swatch {
   height: min(calc(100vw / 8), 60px);
   width: min(calc(100vw / 8), 60px);
+  height: min(calc(100dvw / 8), 60px);
+  width: min(calc(100dvw / 8), 60px);
   margin: 2vw;
   border: 5px solid black;
   border-radius: 15px;
@@ -62,6 +67,8 @@ body {
   .color-swatch {
     height: min(calc(100vw / 12), 80px);
     width: min(calc(100vw / 12), 80px);
+    height: min(calc(100dvw / 12), 80px);
+    width: min(calc(100dvw / 12), 80px);
   }
 }
 
@@ -69,6 +76,8 @@ body {
   .color-swatch {
     height: min(calc(100vw / 16), 120px);
     width: min(calc(100vw / 16), 120px);
+    height: min(calc(100dvw / 16), 120px);
+    width: min(calc(100dvw / 16), 120px);
   }
 }
 
@@ -78,6 +87,8 @@ body {
     transform-origin: left top;
     width: 100vh;
     height: 85vw;
+    width: 100dvh;
+    height: 85dvw;
     position: fixed;
     overflow: hidden;
     top: 100%;
@@ -99,5 +110,7 @@ body {
     height: min(calc(100vh / 8), 60px);
     width: min(calc(100vh / 8), 60px);
     margin: 2vh;
+    height: min(calc(100dvh / 8), 60px);
+    width: min(calc(100dvh / 8), 60px);
   }
 }
