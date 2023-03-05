@@ -8,15 +8,52 @@ body {
 
 .App {
   background-color: $background;
-  // width: 100vw;
   height: 100vh;
   height: 100dvh;
 }
 
-// .backgroundContainer {
-//   height: 100%;
-//   width: 100%;
-// }
+.home {
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.home-banner img {
+  width: 100vw;
+  width: 100dvw;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.home-card {
+  width: 40vw;
+  height: 40vw;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+
+  &:hover {
+    border-color: red;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
 
 .svgContainer {
   height: 85vh;
@@ -97,6 +134,16 @@ body {
 
   .eraser {
     transform: rotate(90deg);
+  }
+
+  .home-banner img {
+    width: 100vh;
+    width: 100dvh;
+  }
+
+  .home-card {
+    width: 40vh;
+    height: 40vh;
   }
 
   .color-swatch-container {

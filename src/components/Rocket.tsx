@@ -1,7 +1,7 @@
-import { espLinePath } from "../data/espLinePath"
-import { espPath } from "../data/espPath"
+import { rocketLinePath } from "../data/rocketLinePath"
+import { rocketPath } from "../data/rocketPath"
 
-export const Esp = ({
+export const Rocket = ({
   fillColors,
   onFill,
 }: {
@@ -12,17 +12,18 @@ export const Esp = ({
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="1152.000000pt"
-      height="2048.000000pt"
-      viewBox="0 0 1200.000000 2200.000000"
+      width="1400.000000pt"
+      height="1400.000000pt"
+      viewBox="0 0 1500.000000 1300.000000"
       preserveAspectRatio="xMidYMid meet"
     >
       <g
-        transform="translate(20.000000,2100.000000) scale(0.100000,-0.100000)"
+        transform="translate(150.000000,1300.000000) scale(0.100000,-0.100000)"
         fill="#000000"
-        stroke="none"
+        stroke="black"
+        stroke-width="150px"
       >
-        {espPath.map((path, index) => (
+        {rocketPath.map((path, index) => (
           <path
             key={index}
             onClick={() => onFill(index)}
@@ -31,7 +32,7 @@ export const Esp = ({
             d={path}
           />
         ))}
-        {espLinePath.map((linePath, index) => (
+        {rocketLinePath.map((linePath, index) => (
           <path key={index} d={linePath} />
         ))}
       </g>
