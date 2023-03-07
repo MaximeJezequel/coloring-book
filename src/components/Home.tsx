@@ -1,4 +1,4 @@
-import coloriage from "../assets/coloriage.png"
+import coloriage from "../assets/coloriage2.png"
 import esp from "../assets/esp.svg"
 import rocket from "../assets/rocket.svg"
 

@@ -1,6 +1,7 @@
 $background: black;
 $edge-url: "../assets/edge.jpg";
 $edge-rotated-url: "../assets/edge-rotated.png";
+$smoke-url: "../assets/smoke.png";
 
 body {
   margin: 0;
@@ -20,8 +21,12 @@ body {
   background-color: #242424;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
+  background-image: url($smoke-url);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
 }
 
 .home-banner img {
@@ -30,18 +35,19 @@ body {
 }
 
 .home-container {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
 .home-card {
-  width: 40vw;
-  height: 40vw;
+  width: 50vw;
+  height: 50vw;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0.5rem;
   background-color: white;
   border-radius: 1rem;
 
@@ -136,14 +142,18 @@ body {
     transform: rotate(90deg);
   }
 
-  .home-banner img {
-    width: 100vh;
-    width: 100dvh;
+  .home-container {
+    padding-top: 0;
   }
 
   .home-card {
-    width: 40vh;
-    height: 40vh;
+    width: 50vh;
+    height: 50vh;
+  }
+
+  .home-banner img {
+    width: 100vh;
+    width: 100dvh;
   }
 
   .color-swatch-container {
